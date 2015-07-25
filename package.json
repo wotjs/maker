@@ -1,0 +1,20 @@
+{
+  "name": "wotter",
+  "version": "0.0.1",
+  "homepage": "https://github.com/evanxd/wotter",
+  "authors": [
+    "Evan Tseng <evan@tseng.io>"
+  ],
+  "description": "Hack with Arduino for Web developers.",
+  "keywords": [
+    "arduino",
+    "chrome",
+    "johnny-five",
+    "serial"
+  ],
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "chrome-usb-serialport": "0.0.2",
+    "browserify-johnny-five": "0.0.2"
+  }
+}
