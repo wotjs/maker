@@ -1,13 +1,27 @@
-/* global five, ChromeUsbSerialport */
+/* global CodeMirror */
 'use strict';
 
-(function() {
-  var path = '/dev/cu.usbmodem1421';
-  var options = { baudRate: 57600 };
-  var port = new ChromeUsbSerialport(path, options, true);
-  var board = new five.Board({ port: port, repl: false });
-  board.on('ready', function() {
-    var led = new five.Led(7);
-    led.blink(300);
+(function(exports) {
+  var editor = document.querySelector('#editor');
+  var run = document.querySelector('#run');
+  var javascript =
+`var led = new five.Led(7);
+led.on();
+`;
+  var codeMirror = CodeMirror(editor, {
+    value: javascript,
+    lineNumbers: true
   });
-}());
+
+  run.addEventListener('click', function() {
+    /*jshint evil:true */
+    eval(codeMirror.getValue());
+  });
+
+  window.addEventListener('boardready', function() {
+    run.disabled = false;
+  });
+
+  // For trying CodeMirror.
+  exports.codeMirror = codeMirror;
+}(window));

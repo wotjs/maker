@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>WoTer</title>
+    <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="style/woter.css">
     <script defer src="node_modules/chrome-usb-serialport/node_modules/eventemitter2/lib/eventemitter2.js"></script>
     <script defer src="node_modules/chrome-usb-serialport/node_modules/chrome-app-api-proxy/index.js"></script>
     <script defer src="node_modules/chrome-usb-serialport/index.js"></script>
     <script defer src="node_modules/browserify-johnny-five/build/browserify-johnny-five.js"></script>
+    <script defer src="node_modules/codemirror/lib/codemirror.js"></script>
+    <script defer src="js/board.js"></script>
     <script defer src="js/index.js"></script>
   </head>
   <body>
-    Welcome to WoTer!
+    <div id="editor"></div>
+    <button id="run" disabled>Run</button>
   </body>
 </html>
