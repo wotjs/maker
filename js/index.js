@@ -13,6 +13,7 @@ led.on();
     mode: 'javascript',
     value: javascript
   });
+  codeMirror.setSize('100%', '100%');
 
   run.addEventListener('click', function() {
     /*jshint evil:true */
