@@ -9,8 +9,9 @@
 led.on();
 `;
   var codeMirror = CodeMirror(editor, {
-    value: javascript,
-    lineNumbers: true
+    lineNumbers: true,
+    mode: 'javascript',
+    value: javascript
   });
 
   run.addEventListener('click', function() {
