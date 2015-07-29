@@ -1,29 +1,40 @@
 /* global CodeMirror */
 'use strict';
 
-(function(exports) {
+(function() {
+  var DEFAULT_SCRIPT = 'var led = new five.Led(7);\nled.on();\n';
   var editor = document.querySelector('#editor');
+  var log = document.querySelector('#log');
   var run = document.querySelector('#run');
-  var javascript =
-`var led = new five.Led(7);
-led.on();
-`;
-  var codeMirror = CodeMirror(editor, {
+
+  var editorCodeMirror = CodeMirror(editor, {
     lineNumbers: true,
     mode: 'javascript',
-    value: javascript
+    value: DEFAULT_SCRIPT
   });
-  codeMirror.setSize('100%', '100%');
+  editorCodeMirror.setSize('100%', '100%');
+
+  var logCodeMirror = CodeMirror(log, {
+    readOnly: true,
+  });
+  logCodeMirror.setSize('100%', '100%');
 
   run.addEventListener('click', function() {
     /*jshint evil:true */
-    eval(codeMirror.getValue());
+    eval(editorCodeMirror.getValue());
+  });
+
+  window.addEventListener('boardconnecting', function() {
+    var log = logCodeMirror.getValue();
+    log = 'Connecting the Arduino board...\n' + log;
+    logCodeMirror.setValue(log);
+    run.disabled = true;
   });
 
   window.addEventListener('boardready', function() {
+    var log = logCodeMirror.getValue();
+    log = 'Arduino board is connected.\n' + log;
+    logCodeMirror.setValue(log);
     run.disabled = false;
   });
-
-  // For trying CodeMirror.
-  exports.codeMirror = codeMirror;
-}(window));
+}());

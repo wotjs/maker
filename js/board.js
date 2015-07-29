@@ -11,5 +11,7 @@
     window.dispatchEvent(new CustomEvent('boardready'));
   });
 
+  window.dispatchEvent(new CustomEvent('boardconnecting'));
+
   exports.arduino = board;
 }(window));
