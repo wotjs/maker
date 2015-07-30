@@ -3,6 +3,6 @@ body {
   padding: 0;
 }
 
-#editor {
+#editor, #log, #run {
   font-size: 2rem;
 }
