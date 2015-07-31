@@ -2,8 +2,11 @@
 'use strict';
 
 (function(exports) {
-  var path = '/dev/cu.usbmodem1421';
-  var options = { baudRate: 57600 };
+  var path = '/dev/cu.usbmodem1411';
+  var options = {
+  	baudRate: 57600,
+  	extensionId: 'neponigbmdndahdonomcdimneongpnim'
+  };
   var port = new ChromeUsbSerialport(path, options, true);
   var board = new five.Board({ port: port, repl: false });
 
