@@ -15,7 +15,7 @@
   "license": "Apache License 2.0",
   "dependencies": {
     "browserify-johnny-five": "0.0.2",
-    "chrome-usb-serialport": "0.0.5",
+    "chrome-usb-serialport": "0.0.6",
     "codemirror": "5.5.0"
   }
 }
