@@ -4,7 +4,7 @@
 (function() {
   var options = {
   	baudRate: 57600,
-  	extensionId: 'neponigbmdndahdonomcdimneongpnim'
+  	extensionId: 'mncdajaedfblonbkmodofckdialkolgk'
   };
   var port = new ChromeUsbSerialport(null, options, true);
   var board = new five.Board({ port: port, repl: false });
