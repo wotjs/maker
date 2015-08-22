@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>IoT Maker</title>
     <link rel="stylesheet" href="style/index.css">
+    <script defer src="js/start-app.js"></script>
     <script defer src="node_modules/chrome-usb-serialport/node_modules/eventemitter2/lib/eventemitter2.js"></script>
     <script defer src="node_modules/chrome-usb-serialport/node_modules/chrome-app-api-proxy/index.js"></script>
     <script defer src="node_modules/chrome-usb-serialport/index.js"></script>
@@ -15,6 +16,8 @@
   <body>
     <div id="menu">
       <button id="run">Run</button>
+      <!-- XXX: Workaround to lanuch Chrome API Proxy App. -->
+      <a id="start-app" href="start-app.html"></a>
     </div>
 <div id="editor">var led = new five.Led(7);
 led.on();
