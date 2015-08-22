@@ -1,40 +1,25 @@
-/* global CodeMirror */
+/* global ace */
 'use strict';
 
 (function() {
-  var DEFAULT_SCRIPT = 'var led = new five.Led(7);\nled.on();\n';
-  var editor = document.querySelector('#editor');
   var log = document.querySelector('#log');
   var run = document.querySelector('#run');
+  var editor = ace.edit('editor');
 
-  var editorCodeMirror = CodeMirror(editor, {
-    lineNumbers: true,
-    mode: 'javascript',
-    value: DEFAULT_SCRIPT
-  });
-  editorCodeMirror.setSize('100%', '100%');
-
-  var logCodeMirror = CodeMirror(log, {
-    readOnly: true,
-  });
-  logCodeMirror.setSize('100%', '100%');
+  editor.setTheme("ace/theme/twilight");
+  editor.getSession().setMode("ace/mode/javascript");
 
   run.addEventListener('click', function() {
     /*jshint evil:true */
-    eval(editorCodeMirror.getValue());
+    eval(editor.getValue());
   });
 
   window.addEventListener('boardconnecting', function() {
-    var log = logCodeMirror.getValue();
-    log = 'Connecting the Arduino board...\n' + log;
-    logCodeMirror.setValue(log);
-    run.disabled = true;
+    log.innerHTML = 'Connecting the Arduino board...';
   });
 
   window.addEventListener('boardready', function() {
-    var log = logCodeMirror.getValue();
-    log = 'Arduino board is connected.\n' + log;
-    logCodeMirror.setValue(log);
-    run.disabled = false;
+    log.innerHTML = 'Arduino board is connected.';
+    run.style.display = 'block';
   });
 }());

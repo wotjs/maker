@@ -1,8 +1,0 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
-#editor, #log, #run {
-  font-size: 2rem;
-}

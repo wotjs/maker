@@ -1,21 +1,20 @@
 {
-  "name": "woter",
+  "name": "iot-maker",
   "version": "0.0.2",
-  "homepage": "https://github.com/evanxd/woter",
+  "homepage": "https://github.com/wotjs/maker",
   "authors": [
     "Evan Tseng <evan@tseng.io>"
   ],
-  "description": "Hack with Arduino for Web developers.",
+  "description": "Do Arduino and IoT/WoT hacks with JavaScript.",
   "keywords": [
     "arduino",
-    "chrome",
+    "iot",
     "johnny-five",
-    "serial"
+    "wot"
   ],
   "license": "Apache License 2.0",
   "dependencies": {
     "browserify-johnny-five": "0.0.2",
-    "chrome-usb-serialport": "0.0.6",
-    "codemirror": "5.5.0"
+    "chrome-usb-serialport": "0.0.6"
   }
 }

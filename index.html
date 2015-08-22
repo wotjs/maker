@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>IoT Maker</title>
-    <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
-    <link rel="stylesheet" href="style/woter.css">
+    <link rel="stylesheet" href="style/index.css">
     <script defer src="node_modules/chrome-usb-serialport/node_modules/eventemitter2/lib/eventemitter2.js"></script>
     <script defer src="node_modules/chrome-usb-serialport/node_modules/chrome-app-api-proxy/index.js"></script>
     <script defer src="node_modules/chrome-usb-serialport/index.js"></script>
     <script defer src="node_modules/browserify-johnny-five/build/browserify-johnny-five.js"></script>
-    <script defer src="node_modules/codemirror/lib/codemirror.js"></script>
-    <script defer src="node_modules/codemirror/mode/javascript/javascript.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
     <script defer src="js/index.js"></script>
     <script defer src="js/board.js"></script>
   </head>
   <body>
-    <div id="editor"></div>
+    <div id="menu">
+      <button id="run">Run</button>
+    </div>
+<div id="editor">var led = new five.Led(7);
+led.on();
+</div>
     <div id="log"></div>
-    <button id="run" disabled>Run</button>
   </body>
 </html>
