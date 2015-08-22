@@ -2,5 +2,5 @@
 
 (function() {
   // XXX: Workaround to lanuch Chrome API Proxy App.
-  document.querySelector('#start-app').click();
+  document.querySelector('#setup').click();
 }());
