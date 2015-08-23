@@ -10,9 +10,9 @@
   var board = new five.Board({ port: port, repl: false });
 
   board.on('ready', function() {
-    window.dispatchEvent(new CustomEvent('boardready'));
     console.log('Arduino board is ready.');
     parent.postMessage('Arduino board is ready.', '*');
+    window.dispatchEvent(new CustomEvent('boardready'));
   });
 
   console.log('Connecting Arduino board...');

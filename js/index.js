@@ -25,9 +25,9 @@
       var script = document.createElement('script');
       script.text = `
         window.addEventListener('boardready', function() {
-          ${editor.getValue()}
           console.log('Arduino board is running.');
           parent.postMessage('Arduino board is running.', '*');
+          ${editor.getValue()}
         });
       `
       sandbox.contentWindow.document.body.appendChild(script);
