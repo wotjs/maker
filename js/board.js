@@ -11,7 +11,10 @@
 
   board.on('ready', function() {
     window.dispatchEvent(new CustomEvent('boardready'));
+    console.log('Arduino board is ready.');
+    parent.postMessage('Arduino board is ready.', '*');
   });
 
-  console.log('Connecting the Arduino board...');
+  console.log('Connecting Arduino board...');
+  parent.postMessage('Connecting Arduino board...', '*');
 }());
