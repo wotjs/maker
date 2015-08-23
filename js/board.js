@@ -13,5 +13,5 @@
     window.dispatchEvent(new CustomEvent('boardready'));
   });
 
-  window.dispatchEvent(new CustomEvent('boardconnecting'));
+  console.log('Connecting the Arduino board...');
 }());

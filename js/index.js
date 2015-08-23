@@ -10,16 +10,26 @@
   editor.getSession().setMode("ace/mode/javascript");
 
   run.addEventListener('click', function() {
-    /*jshint evil:true */
-    eval(editor.getValue());
-  });
-
-  window.addEventListener('boardconnecting', function() {
-    log.innerHTML = 'Connecting the Arduino board...';
-  });
-
-  window.addEventListener('boardready', function() {
-    log.innerHTML = 'Arduino board is connected.';
-    run.style.display = 'block';
+    // Create sandbox.
+    var sandbox = document.querySelector('#sandbox');
+    if (sandbox) {
+      sandbox.parentNode.removeChild(sandbox);
+    }
+    sandbox = document.createElement('iframe');
+    sandbox.style.display = 'node';
+    sandbox.id = 'sandbox';
+    document.body.appendChild(sandbox);
+    sandbox.src = 'sandbox.html';
+    // Run code in sandbox.
+    sandbox.addEventListener('load', function() {
+      var script = document.createElement('script');
+      script.text = `
+        window.addEventListener('boardready', function() {
+          console.log('Arduino board is connected.');
+          ${editor.getValue()}
+        });
+      `
+      sandbox.contentWindow.document.body.appendChild(script);
+    });
   });
 }());

@@ -19,10 +19,6 @@ button {
   background-color: #141414;
 }
 
-#run {
-  display: none;
-}
-
 #editor {
   font-size: 2rem;
   margin: 0;
