@@ -3,42 +3,21 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro';
-  font-size: 1.5rem;
-  color: #FFFFFF;
-}
-
-button {
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro';
-  font-size: 1.5rem;
-  width: 100%;
-  padding: 1rem;
-}
-
-.editor {
-  height: 11rem;
-  width: 100%;
-}
-
-#menu {
   background-color: #141414;
 }
 
 #html-editor, #js-editor, #css-editor {
-  font-size: 1.5rem;
-}
-
-#result {
-  background-color: #141414;
-  height: 11rem;
+  font-size: 2rem;
+  height: 50rem;
 }
 
 #sandbox {
-  background-color: #141414;
+  border: 0;
   width: 100%;
   height: 100%;
-  border: 0;
 }
 
 #log {
+  color: #FFFFFF;
   background-color: #232323;
 }

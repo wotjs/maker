@@ -2,29 +2,39 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IoT Maker</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script defer src="js/setup.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
     <script defer src="js/index.js"></script>
   </head>
   <body>
-    <div id="menu">
-      <button id="run">Run</button>
-      <!-- XXX: Workaround to lanuch Chrome API Proxy App. -->
-      <a id="setup" href="setup.html"></a>
-    </div>
-    <div id="editor">
-<div id="html-editor" class="editor">&lt;button id="button">On/Off&lt;/button></div>
-<div id="js-editor" class="editor">var led = new five.Led(7);
+    <div class="container-fluid">
+      <div id="menu" class="row">
+        <button id="title" class="btn btn-default btn-lg" disabled>IoT Maker</button>
+        <button id="run" class="btn btn-default btn-lg">Run</button>
+        <!-- XXX: Workaround to lanuch Chrome API Proxy App. -->
+        <a id="setup" href="setup.html"></a>
+      </div>
+      <div id="editor" class="row">
+        <div id="html-editor" class="col-sm-3">&lt;button id="button">On/Off&lt;/button></div>
+<div id="js-editor" class="col-sm-6">var led = new five.Led(7);
 var button = document.querySelector('#button');
+
 button.addEventListener('click', function() {
   led.toggle();
 });
 </div>
-      <div id="css-editor" class="editor"></div>
+        <div id="css-editor" class="col-sm-3"></div>
+      </div>
+      <div id="log" class="row">IoT Maker is ready!</div>
+      <div id="result" class="row">
+        <iframe id="sandbox"></iframe>
+      </div>
     </div>
-    <div id="result"><iframe id="sandbox"></iframe></div>
-    <div id="log">IoT Maker is ready!</div>
   </body>
 </html>
