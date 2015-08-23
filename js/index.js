@@ -50,4 +50,16 @@
   window.addEventListener('message', function(evt) {
     log.innerHTML = evt.data;
   });
+
+  function importExample(file) {
+    var script = document.createElement('script');
+    script.src = 'examples/' + file;
+    document.head.appendChild(script);
+  }
+
+  // For importing examples.
+  window.htmlEditor = htmlEditor;
+  window.jsEditor = jsEditor;
+  window.cssEditor = cssEditor;
+  window.importExample = importExample;
 }());
