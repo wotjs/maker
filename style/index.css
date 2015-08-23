@@ -3,43 +3,42 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro';
+  font-size: 1.5rem;
+  color: #FFFFFF;
 }
 
 button {
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro';
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 100%;
   padding: 1rem;
 }
 
+.editor {
+  height: 11rem;
+  width: 100%;
+}
+
 #menu {
-  position: absolute;
-  width: 7rem;
-  height: 100%;
   background-color: #141414;
 }
 
-#editor {
-  font-size: 2rem;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 7rem;
-  right: 0;
-  height: 90%;
+#html-editor, #js-editor, #css-editor {
+  font-size: 1.5rem;
+}
+
+#result {
+  background-color: #141414;
+  height: 11rem;
+}
+
+#sandbox {
+  background-color: #141414;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 #log {
-  padding: 1rem;
-  font-size: 2rem;
-  margin: 0;
-  position: absolute;
-  top: 90%;
-  bottom: 0;
-  left: 7rem;
-  right: 0;
-  height: 10%;
-  color: #FFFFFF;
   background-color: #232323;
 }

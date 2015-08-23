@@ -14,9 +14,14 @@
       <!-- XXX: Workaround to lanuch Chrome API Proxy App. -->
       <a id="setup" href="setup.html"></a>
     </div>
-<div id="editor">var led = new five.Led(7);
+    <div id="editor">
+      <div id="html-editor" class="editor"></div>
+<div id="js-editor" class="editor">var led = new five.Led(7);
 led.on();
 </div>
-    <div id="log"></div>
+      <div id="css-editor" class="editor"></div>
+    </div>
+    <div id="result"><iframe id="sandbox"></iframe></div>
+    <div id="log">IoT Maker is ready!</div>
   </body>
 </html>
