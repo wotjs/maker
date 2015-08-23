@@ -1,4 +1,4 @@
-/* global jsEditor */
+/* global htmlEditor, jsEditor, cssEditor */
 'use strict';
 
 (function() {
@@ -17,6 +17,6 @@ function rgb(value) {
 }
 `;
   htmlEditor.setValue('');
-  jsEditor.setValue(js);
+  jsEditor.setValue(js, -1);
   cssEditor.setValue('');
 }());

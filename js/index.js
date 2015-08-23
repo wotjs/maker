@@ -51,6 +51,7 @@
     log.innerHTML = evt.data;
   });
 
+  importExample('led.js');
   function importExample(file) {
     var script = document.createElement('script');
     script.src = 'examples/' + file;

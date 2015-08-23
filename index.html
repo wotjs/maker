@@ -21,6 +21,7 @@
             Examples <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
+            <li><a href="javascript:importExample('led.js');">Button Turns On/Off a LED</a></li>
             <li><a href="javascript:importExample('potentiometer.js');">Potentiometer Controls Background Color</a></li>
           </ul>
         </div>
@@ -29,14 +30,8 @@
         <a id="setup" href="setup.html"></a>
       </div>
       <div id="editor" class="row">
-        <div id="html-editor" class="col-sm-3">&lt;button id="button">On/Off&lt;/button></div>
-<div id="js-editor" class="col-sm-6">var led = new five.Led(7);
-var button = document.querySelector('#button');
-
-button.addEventListener('click', function() {
-  led.toggle();
-});
-</div>
+        <div id="html-editor" class="col-sm-3"></div>
+        <div id="js-editor" class="col-sm-6"></div>
         <div id="css-editor" class="col-sm-3"></div>
       </div>
       <div id="log" class="row">WoT Maker is ready!</div>
