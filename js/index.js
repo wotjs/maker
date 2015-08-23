@@ -30,7 +30,7 @@
           ${editor.getValue()}
         });
       `
-      sandbox.contentWindow.document.body.appendChild(script);
+      sandbox.contentWindow.document.head.appendChild(script);
     });
   });
 
