@@ -15,9 +15,12 @@
       <a id="setup" href="setup.html"></a>
     </div>
     <div id="editor">
-      <div id="html-editor" class="editor"></div>
+<div id="html-editor" class="editor">&lt;button id="button">On/Off&lt;/button></div>
 <div id="js-editor" class="editor">var led = new five.Led(7);
-led.on();
+var button = document.querySelector('#button');
+button.addEventListener('click', function() {
+  led.toggle();
+});
 </div>
       <div id="css-editor" class="editor"></div>
     </div>
