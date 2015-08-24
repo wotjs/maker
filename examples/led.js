@@ -4,7 +4,7 @@
 (function() {
   var html = `<button id="button">On/Off</button>
 `;
-  var js = `var led = new five.Led(7);
+  var js = `var led = new arduino.Led(7);
 var button = document.querySelector('#button');
 
 button.addEventListener('click', function() {

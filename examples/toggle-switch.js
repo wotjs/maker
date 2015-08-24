@@ -4,7 +4,7 @@
 (function() {
   var html = `<div id="restroom">WC</div>
 `;
-  var js = `var toggleSwitch = five.Switch(6);
+  var js = `var toggleSwitch = arduino.Switch(6);
 var restroom = document.querySelector('#restroom');
 
 Notification.requestPermission();

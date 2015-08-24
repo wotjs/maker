@@ -17,4 +17,8 @@
 
   console.log('Connecting Arduino board...');
   parent.postMessage('Connecting Arduino board...', '*');
+
+  // Export arduino to replace global five object.
+  // It more makes sense to developers.
+  window.arduino = five;
 }());

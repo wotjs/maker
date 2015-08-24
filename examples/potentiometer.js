@@ -2,7 +2,7 @@
 'use strict';
 
 (function() {
-  var js = `var pot = five.Sensor({
+  var js = `var pot = arduino.Sensor({
   pin: 'A0',
   freq: 250
 });
