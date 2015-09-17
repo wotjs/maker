@@ -2,6 +2,7 @@
 'use strict';
 
 (function() {
+  var SERVER_URL = 'http://wotjs.io/maker/';
   var log = document.querySelector('#log');
   var run = document.querySelector('#run');
   var htmlEditor = ace.edit('html-editor');

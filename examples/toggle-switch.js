@@ -2,7 +2,7 @@
 'use strict';
 
 (function() {
-  var html = `<div id="restroom">WC</div>
+  var html = `<div id="restroom">Restroom</div>
 `;
   var js = `var toggleSwitch = arduino.Switch(6);
 var restroom = document.querySelector('#restroom');
@@ -17,16 +17,15 @@ toggleSwitch.on('open', function() {
 toggleSwitch.on('close', function() {
   restroom.style.backgroundColor = 'red';
 });
-
 `;
   var css = `#restroom {
   color: white;
   font-size: 2rem;
   padding: 1rem;
-  width: 4rem;
-  height: 4rem;
+  width: 9.5rem;
+  height: 3rem;
   border-radius: 1rem;
-  background-color: orange;
+  background-color: green;
 }
 `;
   htmlEditor.setValue(html, -1);
